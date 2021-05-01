@@ -126,6 +126,12 @@ const theme = {
 
 const App = () => (
   <div>
+    {[42, "hello", new Date()].map((atom) => (
+      <>
+        <JSONTree data={atom} theme={theme} invertTheme />
+        <br />
+      </>
+    ))}
     <JSONTree data={data} theme={theme} invertTheme />
     <br />
     <h3>Dark Theme</h3>
